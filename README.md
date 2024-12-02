@@ -57,7 +57,7 @@ YOLO (You Only Look Once) is a single-shot object detection system that processe
 ## Step 1: Divide the Image into an NxN Grid
 
 The first step in YOLO object detection involves dividing the original input image (**Image A**) into an **NxN grid** of equal-sized cells. Each grid cell is responsible for detecting objects whose center falls within the cell.
-![](residual box.png)
+![](residualbox.png)
   
 
 
