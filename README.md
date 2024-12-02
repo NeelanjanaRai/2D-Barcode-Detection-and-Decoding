@@ -84,5 +84,16 @@ Y = [pc, bx, by, bw, bh, c1, c2, ..., cn]
   - For example, in a two-class system (`c1` and `c2`), these values indicate the likelihood of the detected object belonging to each class.
  ![](residualbox.png)    ![](boundingbox.png)
 
+## Step 3: Intersection Over Union (IOU)
+
+In YOLO, **Intersection Over Union (IOU)** is a key metric used to refine bounding box predictions by comparing them to the ground truth. It helps eliminate irrelevant predictions and retain only the most accurate bounding boxes for an object.
+
+---
+
+### What is IOU?
+- IOU measures the overlap between two bounding boxes:
+  - **Predicted Bounding Box (P):** The box predicted by the model.
+  - **Ground Truth Bounding Box (G):** The actual box that perfectly encloses the object.
+
 
 
