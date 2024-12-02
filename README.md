@@ -57,7 +57,32 @@ YOLO (You Only Look Once) is a single-shot object detection system that processe
 ## Step 1: Divide the Image into an NxN Grid
 
 The first step in YOLO object detection involves dividing the original input image (**Image A**) into an **NxN grid** of equal-sized cells. Each grid cell is responsible for detecting objects whose center falls within the cell.
+
+
 ![](residualbox.png)
+
+## Step 2: Bounding Box Regression
+
+The second step in YOLO object detection is **bounding box regression**, where the model predicts rectangular boxes (bounding boxes) around objects in the image. These bounding boxes localize the objects and highlight their positions within the grid.
+
+Y = [pc, bx, by, bw, bh, c1, c2, ..., cn]
+
+### Components of `Y`
+- **`pc` (Probability Score):**
+  - Indicates whether the grid cell contains an object.
+  - Ranges between 0 and 1.
+  - Grid cells with objects (e.g., highlighted in red) will have `pc > 0`, while empty cells will have `pc ≈ 0`.
+
+- **`bx, by` (Bounding Box Center Coordinates):**
+  - The coordinates of the center of the bounding box, relative to the top-left corner of the grid cell.  
+
+- **`bh, bw` (Bounding Box Height and Width):**
+  - The dimensions of the bounding box, relative to the size of the grid cell.
   
+- **`c1, c2` (Class Probabilities):**
+  - Represent the probabilities for each class.
+  - For example, in a two-class system (`c1` and `c2`), these values indicate the likelihood of the detected object belonging to each class.
+ ![](residualbox.png)    ![](boundingbox.png)
+
 
 
