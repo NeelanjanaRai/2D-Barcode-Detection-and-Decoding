@@ -34,4 +34,19 @@ Some of the reasons why YOLO is right match:
 
 - **Good Generalization**  
   YOLO generalizes well across different datasets and environments, making it versatile and robust.
+  
+## YOLO arch
+  ![YOLO Architecture](arch.png)
+  YOLO architecture consists of:
+
+- **24 Convolutional Layers**  
+  These layers extract features from the input image.
+
+- **4 Max-Pooling Layers**  
+  These layers reduce spatial dimensions, focusing on the most relevant features.
+
+- **2 Fully Connected Layers**  
+  These layers process the extracted features for final predictions, including bounding box coordinates, confidence scores, and class probabilities.
+  
+
 
