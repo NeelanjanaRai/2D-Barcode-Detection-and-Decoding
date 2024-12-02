@@ -37,7 +37,7 @@ Some of the reasons why YOLO is right match:
   
 ## YOLO arch
   ![YOLO Architecture](arch.png)
-  YOLO architecture consists of:
+  
 
 - **24 Convolutional Layers**  
   These layers extract features from the input image.
@@ -47,6 +47,17 @@ Some of the reasons why YOLO is right match:
 
 - **2 Fully Connected Layers**  
   These layers process the extracted features for final predictions, including bounding box coordinates, confidence scores, and class probabilities.
+
+  # Understanding YOLO Object Detection Process
+
+YOLO (You Only Look Once) is a single-shot object detection system that processes an input image (A) to produce various outputs, including bounding boxes and class predictions. Here’s how the process works step-by-step, including how intermediate images B, C, and D are generated.
+
+![](intialVout.png)
+
+## Step 1: Divide the Image into an NxN Grid
+
+The first step in YOLO object detection involves dividing the original input image (**Image A**) into an **NxN grid** of equal-sized cells. Each grid cell is responsible for detecting objects whose center falls within the cell.
+![](residualbox.png)
   
 
 
